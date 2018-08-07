@@ -11,13 +11,32 @@
     <h1>Hola Mundo</h1>
     <!--br Salto de Línea-->
     <br/>
-    <h2>Hello World</h2> 
+    <h2 id="Head">Hello World</h2> 
     <br/>
     <h3>Private mir</h3> 
-
+    <img height="250" src="http://teneightymagazine.com/wp-content/uploads/2017/10/HW-Full-Colour-1.png" alt="Hola Mundo">
     <p>
         Git was built to work on the Linux kernel, meaning that it has had to effectively handle large repositories from day one. Git is written in C, reducing the overhead of runtimes associated with higher-level languages. Speed and performance has been a primary design goal of the Git from the start.
-      </p>
+    </p>
 
+    <input type="button" value="Saludar" onclick="saludo()">
+
+<script>
+  var cambio = false
+  
+    function saludo(){
+        if(cambio == false){
+            document.getElementById("Head").innerHTML = "Que tal todos"
+            cambio = true
+        } else{
+            document.getElementById("Head").innerHTML = "Hello World"
+            cambio = false
+            alert("Cambio deshecho")
+        }
+        console.log("Saludo")
+         
+    }
+
+</script>    
 </body>
 </html>
